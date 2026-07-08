@@ -1,21 +1,100 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Outfit", sans-serif;
+}
 .nav-logo {
-    width: auto;
-    height: 120px;
-    object-fit: contain;
+  width: auto;
+  height: 120px;
+  object-fit: contain;
 }
 
-.navbar-brand{
-    font-weight:700;
+.navbar-brand {
+  font-weight: 700;
 }
 
-.nav-link{
-    color:black;
-    font-weight:500;
-    margin:0 10px;
+.nav-link {
+  color: black;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.hero-heading {
+  font-family: "Volkhov", serif;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 32px;
+}
+
+.hero-button {
+  border: 1px solid #f86925;
+  color: #f86925;
+  transition: all 0.3s ease;
+}
+.hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+}
+
+.hero-img {
+  text-align: center;
+  width: 90%;
+}
+
+.hero-img img {
+  width: 90%;
+}
+
+.search-section {
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.search-box {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.search-item label {
+  font-weight: 600;
+  color: #222;
+}
+
+.search-item p {
+  color: #777;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.search-item i {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.explore-btn{
+    background:#f86925;
+    color:white;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
     transition:.3s;
+}
+
+.explore-btn:hover{
+    background:#e5672f;
+    color:white;
+    transform:translateY(-2px);
 }
