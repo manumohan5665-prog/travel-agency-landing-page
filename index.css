@@ -354,25 +354,15 @@ body {
 }
 
 .popular-badge{
-
     position:absolute;
-
     top:15px;
-
     right:15px;
-
     background:var(--primary);
-
     color:#fff;
-
     padding:6px 12px;
-
     border-radius:6px;
-
     font-size:13px;
-
     font-weight:600;
-
 }
 
 .vacation-image img{
@@ -416,6 +406,71 @@ body {
     font-weight:600;
 }
 
-.send{
-  color: #f86925;
+/* TESTIMONIAL SECTION */
+.testimonial-section{
+    padding:120px 0;
+    background:#F7F8FC;
+}
+
+.testimonial-heading h2{
+    font-size:48px;
+    font-family:'Volkhov', serif;
+    font-weight:700;
+}
+
+.testimonial-heading p{
+    margin:25px 0 35px;
+    color:#666;
+    line-height:30px;
+}
+
+.testimonial-wrapper{
+    position:relative;
+    height:380px;
+}
+
+.testimonial-card{
+    background:white;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 25px 50px rgba(0,0,0,.08);
+}
+
+.profile-img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    position:absolute;
+    top:-10px;
+    left:-10px;
+}
+
+.active-card{
+    position:absolute;
+    z-index:5;
+}
+
+.second-card{
+    position:absolute;
+    top:220px;
+    left:50px;
+    opacity:.35;
+    z-index:1;
+    
+}
+
+.testimonial-card p{
+    color:#444;
+    line-height:30px;
+    margin-bottom:30px;
+}
+
+.testimonial-card h5{
+    font-weight:700;
+}
+
+.active-card:hover{
+    transform:translateY(-8px);
+    transition:.3s;
+    border-left: 5px solid var(--primary);
 }
