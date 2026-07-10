@@ -40,19 +40,19 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">About</a>
+                            <a class="nav-link active" href="#testimonial">About</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Destination</a>
+                            <a class="nav-link active" href="#deals">Destination</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Tour</a>
+                            <a class="nav-link active" href="#vacation">Tour</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Blog</a>
+                            <a class="nav-link active" href="#blog">Blog</a>
                         </li>
                     </ul>
 
@@ -101,45 +101,80 @@
         </section>
 
         <!-- SEARCH SECTION -->
-        <section class="search-section " id="search">
+        <section class="booking-section py-5" id="search">
 
-            <div class="container mt-5">
+            <div class="container">
 
-                <div class="search-box shadow-lg">
+                <div class="booking-box">
 
-                    <div class="row align-items-center g-4">
+                    <div class="row">
 
-                        <div class="search-item col-lg-3">
-                            <label>
-                                Location
-                                <i class="bi bi-chevron-down"></i>
-                            </label>
-                            <p>Where are you going?</p>
+                        <!-- Location -->
+                        <div class="col-lg-3 booking-item dropdown">
+
+                            <a href="#" class="booking-trigger dropdown-toggle" data-bs-toggle="dropdown">
+
+                                <h5>Location</h5>
+                                <p>Where are you going?</p>
+
+                            </a>
+
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">Paris</a></li>
+                                <li><a class="dropdown-item" href="#">London</a></li>
+                                <li><a class="dropdown-item" href="#">Dubai</a></li>
+                                <li><a class="dropdown-item" href="#">Maldives</a></li>
+                            </ul>
+
                         </div>
 
-                        <div class="search-item col-lg-3">
-                            <label>
-                                Date
-                                <i class="bi bi-chevron-down"></i>
-                            </label>
-                            <p>When will you go?</p>
+                        <!-- Date -->
+                        <div class="col-lg-3 booking-item dropdown">
+
+                            <a href="#" class="booking-trigger dropdown-toggle" data-bs-toggle="dropdown">
+
+                                <h5>Date</h5>
+                                <p>When will you go?</p>
+
+                            </a>
+
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">Tomorrow</a></li>
+                                <li><a class="dropdown-item" href="#">Next Week</a></li>
+                            </ul>
+
                         </div>
 
-                        <div class="search-item col-lg-3">
-                            <label>
-                                Guest
-                                <i class="bi bi-chevron-down"></i>
-                            </label>
-                            <p>Number of guest</p>
+                        <!-- Guest -->
+                        <div class="col-lg-3 booking-item dropdown">
+
+                            <a href="#" class="booking-trigger dropdown-toggle" data-bs-toggle="dropdown">
+
+                                <h5>Guest</h5>
+                                <p>Number of guest</p>
+
+                            </a>
+
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">1 Guest</a></li>
+                                <li><a class="dropdown-item" href="#">2 Guests</a></li>
+                                <li><a class="dropdown-item" href="#">3 Guests</a></li>
+                                <li><a class="dropdown-item" href="#">4+ Guests</a></li>
+                            </ul>
+
                         </div>
 
                         <div class="search-item col-lg-3">
                             <button class="btn explore-btn shadow">Explore Now</button>
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
+
         </section>
 
         <!-- TO DO SECTION -->
@@ -147,14 +182,17 @@
 
             <div class="container">
 
-                <div class="section-title text-center">
+                <div class="section-title text-center mb-5">
+
                     <h2>Things you need <span style="color:#F86925;">to do</span></h2>
                     <p>We ensure that you'll embark on a perfectly planned, safe vacation at a price you can afford.</p>
+
                 </div>
 
-                <div class="justify-content-evenly row gx-5 gy-4 ">
+                <div class="row justify-content-around g-4">
 
-                    <div class="feature-card justify-content-evenly col-lg-3 col-md-6 h-100">
+                    <!-- Card-1 -->
+                    <div class="feature-card col-lg-3 col-md-6 h-100">
 
                         <div class="feature-icon">
                             <img src="./images/checklist-click.png" alt="Checklist Icon image" width="70">
@@ -165,7 +203,8 @@
 
                     </div>
 
-                    <div class="feature-card justify-content-evenly col-lg-3 col-md-6 h-100">
+                    <!-- Card-2 -->
+                    <div class="feature-card col-lg-3 col-md-6 h-100">
 
                         <div class="feature-icon">
                             <img src="./images/wallet.png" alt="wallet icon" width="70">
@@ -176,7 +215,8 @@
 
                     </div>
 
-                    <div class="feature-card justify-content-evenly col-lg-3 col-md-6 h-100">
+                    <!-- Card-3 -->
+                    <div class="feature-card col-lg-3 col-md-6 h-100">
 
                         <div class="feature-icon">
                             <img src="./images/location-icon.png" alt="location icon" width="70">
@@ -184,9 +224,11 @@
 
                         <h4>Exciting Travel</h4>
                         <p>Start and explore a wide range of exciting travel experience.</p>
+
                     </div>
 
                 </div>
+
             </div>
 
         </section>
@@ -369,6 +411,7 @@
 
         </section>
 
+        <!-- VACATION SECTION -->
         <section class="vacation-section" id="vacation">
 
             <div class="container">
@@ -503,7 +546,7 @@
 
         </section>
 
-        <section id="testimonial-section">
+        <section class="testimonial-section" id="testimonial">
 
             <div class="container">
 
@@ -535,8 +578,9 @@
                             <div class="testimonial-card active-card mt-5">
 
                                 <img src="images/avatar.png" class="profile-img" alt="avatar image">
-                                
-                                <p>"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next."</p>
+
+                                <p>"On the Windows talking painted pasture yet its express parties use. Sure last upon
+                                    he same as knew next."</p>
                                 <h5>Mike Taylor</h5>
                                 <span style="color:#777;">Lahore, Pakistan</span>
 
@@ -545,10 +589,10 @@
                             <!-- BACK CARD -->
                             <div class="testimonial-card second-card mt-5">
 
-                                
+
                                 <h5>Chris Thomas</h5>
                                 <span style="color:#777;">CEO of Red Button</span>
-                                
+
 
                             </div>
 
@@ -562,17 +606,227 @@
 
         </section>
 
-        <section id="blog">
+        <!-- Blog Section -->
+
+        <section class="blog-section" id="blog">
+
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <h2>Get update with <span style="color: #F86925;">latest blog</span></h2>
+
+                </div>
+
+                <div class="row g-4 mt-5">
+
+                    <!-- CARD-1 -->
+                    <div class="col-lg-3 col-md-6">
+
+                        <article class="blog-card">
+
+                            <div class="blog-image">
+
+                                <img src="./images/blog-1.png" alt="Blog Image">
+
+                            </div>
+
+                            <div class="blog-body">
+
+                                <h5>The amazing difference a year of travelling.</h5>
+                                <span style="color:#888;"><i class="bi bi-calendar3"></i> July 27, 2021</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- CARD-2 -->
+                    <div class="col-lg-3 col-md-6">
+
+                        <article class="blog-card">
+
+                            <div class="blog-image">
+
+                                <img src="./images/blog-2.png" alt="Blog Image">
+
+                            </div>
+
+                            <div class="blog-body">
+
+                                <h5>Travel far enough,you meet yourself.</h5>
+                                <span style="color:#888;"><i class="bi bi-calendar3"></i> July 27, 2021</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- CARD-3 -->
+                    <div class="col-lg-3 col-md-6">
+
+                        <article class="blog-card">
+
+                            <div class="blog-image">
+
+                                <img src="./images/blog-3.png" alt="Blog Image">
+
+                            </div>
+
+                            <div class="blog-body">
+
+                                <h5>How to save monday while visiting Africa.</h5>
+                                <span style="color:#888;"><i class="bi bi-calendar3"></i> July 27, 2021</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- CARD-4 -->
+                    <div class="col-lg-3 col-md-6">
+
+                        <article class="blog-card">
+
+                            <div class="blog-image">
+
+                                <img src="./images/blog-4.png" alt="Blog Image">
+
+                            </div>
+
+                            <div class="blog-body">
+
+                                <h5>Reflections on 5 months of travel:Time to Hang.</h5>
+                                <span style="color:#888;"><i class="bi bi-calendar3"></i> July 27, 2021</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
-        <section id="subscribe">
+        <section class="newsletter" id="subscribe">
+
+            <div class="container">
+
+                <div class="newsletter-box">
+
+                    <div class="circle one"></div>
+
+                    <div class="circle two"></div>
+
+                    <h2>Subscribe and get exclusive deals & offer</h2>
+
+                    <form class="newsletter-form">
+
+                        <div class="newsletter">
+
+                            <div class="message">
+
+                                <span class="input-icon"><i class="bi bi-envelope"></i></span>
+                                <input type="email" placeholder="Enter your mail">
+                            </div>
+
+                            <button class="subscribe-btn">Subscribe</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
-    <footer>
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <!-- Company -->
+                <div class="col-lg-6">
+
+                    <h3 class="footer-logo">Trabook</h3>
+                    <p class="footer-text">Book your trip in minutes, get full control for much longer.</p>
+                    <!-- Social-Links -->
+                    <div class="social-links">
+
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+
+                    </div>
+
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-lg-2">
+
+                    <h5>Company</h5>
+
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Logistic</a></li>
+                        <li><a href="#">Privacy & Policy</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-2">
+
+                    <h5>Contact</h5>
+
+                    <ul>
+                        <li><a href="#">Help/FAQ</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Affiliates</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- More -->
+                <div class="col-lg-2">
+
+                    <h5>More</h5>
+
+                    <ul>
+                        <li><a href="#">Press Centre</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Low fare tips</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+
+                <p>Copyright, Trabook 2022. All rights reserved </p>
+                <a href="#">Terms & Conditions</a>
+
+            </div>
+
+        </div>
 
     </footer>
 
