@@ -711,6 +711,14 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  .message input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
   
 }
 
