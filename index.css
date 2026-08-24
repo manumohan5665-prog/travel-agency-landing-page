@@ -977,3 +977,84 @@ body {
   background-color: #e5672f;
   color: #ffffff;
 }
+
+/* MY BOOKINGS PAGE */
+
+.booking-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1rem;
+}
+
+.booking-header h3 {
+  margin: 0;
+  color: #222222;
+}
+
+.booking-header i {
+  color: #f86925;
+  margin-right: 0.5rem;
+}
+
+.booking-status {
+  background: #fff0e8;
+  color: #f86925;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.booking-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.booking-info span {
+  display: block;
+  color: #777777;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.booking-info strong {
+  color: #222222;
+}
+
+.no-booking {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+}
+
+.no-booking i {
+  display: block;
+  font-size: 3rem;
+  color: #f86925;
+  margin-bottom: 1rem;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .booking-card {
+    padding: 1.25rem;
+  }
+
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+}
