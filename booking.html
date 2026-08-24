@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trabook | Book Your Trip</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+
+    <section class="auth-section">
+
+        <div class="container">
+
+            <div class="row min-vh-100 align-items-center justify-content-center">
+
+                <div class="col-lg-7 col-md-9">
+
+                    <div class="auth-card shadow">
+
+                        <div class="text-center mb-4">
+
+                            <a href="index.html">
+                                <img src="./images/logo.webp" alt="Trabook Logo" class="auth-logo">
+                            </a>
+
+                            <h2>Book Your Trip ✈️</h2>
+                            <p>
+                                Fill in your details and start your next adventure.
+                            </p>
+
+                        </div>
+
+
+                        <form id="bookingForm" novalidate>
+
+                            <div class="row">
+
+                                <!-- Full Name -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="bookingName" class="form-label">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text" class="form-control" id="bookingName"
+                                        placeholder="Enter your name">
+
+                                    <small class="error-message" id="bookingNameError">
+                                    </small>
+
+                                </div>
+
+                                <!-- Email -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="bookingEmail" class="form-label">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email" class="form-control" id="bookingEmail"
+                                        placeholder="example@mail.com">
+
+                                    <small class="error-message" id="bookingEmailError">
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <!-- Destination -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="destination" class="form-label">
+                                        Destination
+                                    </label>
+
+                                    <select class="form-select" id="destination">
+
+                                        <option value="">
+                                            Select destination
+                                        </option>
+
+                                        <option value="Madrid">
+                                            Madrid
+                                        </option>
+
+                                        <option value="Firenze">
+                                            Firenze
+                                        </option>
+
+                                        <option value="Paris">
+                                            Paris
+                                        </option>
+
+                                        <option value="London">
+                                            London
+                                        </option>
+
+                                    </select>
+
+                                    <small class="error-message" id="destinationError">
+                                    </small>
+
+                                </div>
+
+                                <!-- Travelers -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="travelers" class="form-label">
+                                        Number of Travelers
+                                    </label>
+
+                                    <input type="number" class="form-control" id="travelers" min="1"
+                                        placeholder="Number of travelers">
+
+                                    <small class="error-message" id="travelersError">
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <!-- Departure Date -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="departureDate" class="form-label">
+                                        Departure Date
+                                    </label>
+
+                                    <input type="date" class="form-control" id="departureDate">
+
+                                    <small class="error-message" id="departureDateError">
+                                    </small>
+
+                                </div>
+
+                                <!-- Return Date -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="returnDate" class="form-label">
+                                        Return Date
+                                    </label>
+
+                                    <input type="date" class="form-control" id="returnDate">
+
+                                    <small class="error-message" id="returnDateError">
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Submit -->
+
+                            <button type="submit" class="btn auth-submit-btn w-100">
+                                Confirm Booking
+                            </button>
+
+                            <p class="text-center mt-4 mb-0">
+                                <a href="index.html" class="auth-link">
+                                    ← Back to Home
+                                </a>
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="./js/booking.js"></script>
+
+</body>
+
+</html>
