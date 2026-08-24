@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabook | Sign Up</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <section class="auth-section">
+
+        <div class="container">
+
+            <div class="row min-vh-100 align-items-center justify-content-center">
+
+                <div class="col-lg-6 col-md-8">
+
+                    <div class="auth-card shadow">
+
+                        <!-- logo -->
+
+                        <div class="text-center mb-4">
+
+                            <a href="index.html">
+
+                                <img src="./images/logo.webp" alt="Trabook Logo" class="auth-logo">
+
+                            </a>
+
+                            <h2>Create Account</h2>
+
+                            <p>
+                                Start your exciting journey with Trabook.
+                            </p>
+
+                        </div>
+
+                        <!-- SIGNUP FORM -->
+                        <form id="signupForm" novalidate>
+
+                            <!-- Full Name -->
+
+                            <div class="mb-3">
+
+                                <label for="fullName" class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input type="text" class="form-control" id="fullName"
+                                    placeholder="Enter your full name">
+
+                                <small class="error-message" id="fullNameError">
+                                </small>
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+
+                                <small class="error-message" id="emailError">
+                                </small>
+
+                            </div>
+
+                            <!-- Phone Number -->
+
+                            <div class="mb-3">
+
+                                <label for="phone" class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" class="form-control" id="phone"
+                                    placeholder="Enter 10 digit phone number">
+
+                                <small class="error-message" id="phoneError">
+                                </small>
+
+                            </div>
+
+                            <!-- Location / City -->
+
+                            <div class="mb-3">
+
+                                <label for="city" class="form-label">
+                                    Location / City
+                                </label>
+
+                                <input type="text" class="form-control" id="city" placeholder="Enter your city">
+
+                                <small class="error-message" id="cityError">
+                                </small>
+
+                            </div>
+
+                            <!-- Password -->
+
+                            <div class="mb-3">
+
+                                <label for="password" class="form-label">
+                                    Password
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Minimum 8 characters">
+
+                                    <button type="button" class="toggle-password" data-target="password">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                                <small class="error-message" id="passwordError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Confirm Password -->
+
+                            <div class="mb-4">
+
+                                <label for="confirmPassword" class="form-label">
+                                    Confirm Password
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="Re-enter your password">
+
+                                    <button type="button" class="toggle-password" data-target="confirmPassword">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                                <small class="error-message" id="confirmPasswordError">
+                                </small>
+
+                            </div>
+
+                            <!-- Submit Button -->
+
+                            <button type="submit" class="btn auth-submit-btn w-100">
+                                Create Account
+                            </button>
+
+                            <!-- Redirect -->
+
+                            <p class="text-center mt-4 mb-0">
+                                Already have an account?
+                                <a href="signin.html" class="auth-link">
+                                    Sign In
+                                </a>
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>
