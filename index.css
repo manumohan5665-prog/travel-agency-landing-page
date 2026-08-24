@@ -1043,6 +1043,18 @@ body {
   margin-bottom: 1rem;
 }
 
+.my-bookings-btn {
+  border: 1px solid #f86925;
+  color: #f86925;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.my-bookings-btn:hover {
+  background: #f86925;
+  color: #ffffff;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {

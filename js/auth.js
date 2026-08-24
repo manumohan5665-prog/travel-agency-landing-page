@@ -15,17 +15,24 @@ if (
 ) {
 
     authButtons.innerHTML = `
-    
-        <span class="welcome-user me-3">
-            Welcome, ${registeredUser.fullName}
-        </span>
 
-        <button
-            class="btn logout-btn" id="logoutBtn">
-            Logout
-        </button>
+    <span class="welcome-user me-3">
+        Welcome, ${registeredUser.fullName}
+    </span>
 
-    `;
+    <a
+        href="my-bookings.html"
+        class="btn my-bookings-btn me-2">
+
+        My Bookings
+    </a>
+
+    <button
+        class="btn logout-btn" id="logoutBtn">
+        Logout
+    </button>
+
+`;
 
     // LOGOUT
 
