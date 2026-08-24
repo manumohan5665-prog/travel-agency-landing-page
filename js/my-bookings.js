@@ -20,121 +20,142 @@ if (
 
 }
 
-// GET BOOKING
 
-const booking = JSON.parse(localStorage.getItem("userBooking"));
-const bookingContainer = document.getElementById("bookingContainer");
+// GET ALL BOOKINGS
 
-// DISPLAY BOOKING
+const bookings =
+    JSON.parse(
+        localStorage.getItem(
+            "userBookings"
+        )
+    ) || [];
 
-if (booking) {
-
-    bookingContainer.innerHTML = `
-
-        <div class="col-lg-8">
-
-            <div class="booking-card shadow">
-
-                <div class="booking-header">
-
-                    <h3>
-                        <i class="bi bi-airplane"></i>
-                        ${booking.destination}
-                    </h3>
-
-                    <span class="booking-status">
-                        Confirmed
-                    </span>
-
-                </div>
+const bookingContainer =
+    document.getElementById(
+        "bookingContainer"
+    );
 
 
-                <div class="row mt-4">
+// DISPLAY BOOKINGS
 
-                    <div class="col-md-6 mb-3">
+if (bookings.length > 0) {
 
-                        <div class="booking-info">
+    bookings.forEach(function (booking) {
 
-                            <span>Traveler</span>
+        bookingContainer.innerHTML += `
 
-                            <strong>
-                                ${booking.fullName}
-                            </strong>
+            <div class="col-lg-8 mb-4">
 
-                        </div>
+                <div class="booking-card shadow">
 
-                    </div>
+                    <div class="booking-header">
+
+                        <h3>
+
+                            <i class="bi bi-airplane"></i>
+
+                            ${booking.destination}
+
+                        </h3>
 
 
-                    <div class="col-md-6 mb-3">
+                        <span class="booking-status">
 
-                        <div class="booking-info">
+                            Confirmed
 
-                            <span>Email</span>
-
-                            <strong>
-                                ${booking.email}
-                            </strong>
-
-                        </div>
+                        </span>
 
                     </div>
 
 
-                    <div class="col-md-6 mb-3">
+                    <div class="row mt-4">
 
-                        <div class="booking-info">
+                        <div class="col-md-6 mb-3">
 
-                            <span>Travelers</span>
+                            <div class="booking-info">
 
-                            <strong>
-                                ${booking.travelers}
-                            </strong>
+                                <span>Traveler</span>
 
-                        </div>
+                                <strong>
+                                    ${booking.fullName}
+                                </strong>
 
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <div class="booking-info">
-
-                            <span>Booking Date</span>
-
-                            <strong>
-                                ${booking.bookingDate}
-                            </strong>
+                            </div>
 
                         </div>
 
-                    </div>
 
+                        <div class="col-md-6 mb-3">
 
-                    <div class="col-md-6 mb-3">
+                            <div class="booking-info">
 
-                        <div class="booking-info">
+                                <span>Email</span>
 
-                            <span>Departure</span>
+                                <strong>
+                                    ${booking.email}
+                                </strong>
 
-                            <strong>
-                                ${booking.departureDate}
-                            </strong>
+                            </div>
 
                         </div>
 
-                    </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="booking-info">
+
+                                <span>Travelers</span>
+
+                                <strong>
+                                    ${booking.travelers}
+                                </strong>
+
+                            </div>
+
+                        </div>
 
 
-                    <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3">
 
-                        <div class="booking-info">
+                            <div class="booking-info">
 
-                            <span>Return</span>
+                                <span>Booking Date</span>
 
-                            <strong>
-                                ${booking.returnDate}
-                            </strong>
+                                <strong>
+                                    ${booking.bookingDate}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="booking-info">
+
+                                <span>Departure</span>
+
+                                <strong>
+                                    ${booking.departureDate}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6 mb-3">
+
+                            <div class="booking-info">
+
+                                <span>Return</span>
+
+                                <strong>
+                                    ${booking.returnDate}
+                                </strong>
+
+                            </div>
 
                         </div>
 
@@ -144,9 +165,9 @@ if (booking) {
 
             </div>
 
-        </div>
+        `;
 
-    `;
+    });
 
 } else {
 
@@ -158,9 +179,7 @@ if (booking) {
 
                 <i class="bi bi-airplane-engines"></i>
 
-                <h3>
-                    No Bookings Yet
-                </h3>
+                <h3>No Bookings Yet</h3>
 
                 <p>
                     You haven't booked a trip yet.

@@ -278,14 +278,24 @@ bookingForm.addEventListener(
             };
 
 
-            // Save booking
+            // Get existing bookings
+            const existingBookings =
+                JSON.parse(
+                    localStorage.getItem("userBookings")
+                ) || [];
 
+
+            // Add the new booking
+            existingBookings.push(booking);
+
+
+            // Save all bookings
             localStorage.setItem(
-                "userBooking",
-                JSON.stringify(booking)
+                "userBookings",
+                JSON.stringify(existingBookings)
             );
 
-
+            
             // Success message
 
             alert(
