@@ -956,3 +956,24 @@ body {
   }
 
 }
+
+/* LOGGED IN USER NAVBAR */
+
+.welcome-user {
+  color: #f86925;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  background-color: #f86925;
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.logout-btn:hover {
+  background-color: #e5672f;
+  color: #ffffff;
+}
