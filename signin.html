@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabook | Sign In</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+
+    <section class="auth-section">
+
+        <div class="container">
+
+            <div class="row min-vh-100 align-items-center justify-content-center">
+
+                <div class="col-lg-6 col-md-8">
+
+                    <div class="auth-card shadow">
+
+                        <!-- Logo -->
+
+                        <div class="text-center mb-4">
+
+                            <a href="index.html">
+
+                                <img src="./images/logo.webp" alt="Trabook Logo" class="auth-logo">
+
+                            </a>
+
+                            <h2>Welcome Back!</h2>
+
+                            <p>
+                                Sign in to continue your journey with Trabook.
+                            </p>
+
+                        </div>
+
+                        <!-- SIGN IN FORM -->
+
+                        <form id="signinForm" novalidate>
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label for="signinEmail" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input type="email" class="form-control" id="signinEmail"
+                                    placeholder="example@mail.com">
+
+                                <small class="error-message" id="signinEmailError">
+                                </small>
+
+                            </div>
+
+                            <!-- Password -->
+
+                            <div class="mb-4">
+
+                                <label for="signinPassword" class="form-label">
+                                    Password
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input type="password" class="form-control" id="signinPassword"
+                                        placeholder="Enter your password">
+
+                                    <button type="button" class="toggle-password" data-target="signinPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+
+                                </div>
+
+                                <small class="error-message" id="signinPasswordError">
+                                </small>
+
+                            </div>
+
+                            <!-- Sign In Button -->
+
+                            <button type="submit" class="btn auth-submit-btn w-100">
+                                Sign In
+                            </button>
+
+                            <!-- Redirect to Signup -->
+
+                            <p class="text-center mt-4 mb-0">
+                                Don't have an account?
+                                <a href="signup.html" class="auth-link">
+                                    Sign Up
+                                </a>
+
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="signin.js"></script>
+
+</body>
+
+</html>
