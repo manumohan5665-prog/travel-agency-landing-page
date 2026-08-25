@@ -253,49 +253,33 @@ bookingForm.addEventListener(
             // Create booking object
 
             const booking = {
-
-                fullName:
-                    registeredUser.fullName,
-
-                email:
-                    registeredUser.email,
-
-                destination:
-                    destination.value,
-
-                travelers:
-                    travelers.value,
-
-                departureDate:
-                    departureDate.value,
-
-                returnDate:
-                    returnDate.value,
-
-                bookingDate:
-                    new Date().toLocaleString()
-
+                fullName: registeredUser.fullName,
+                email: registeredUser.email,
+                destination: destination.value,
+                travelers: travelers.value,
+                departureDate: departureDate.value,
+                returnDate: returnDate.value,
+                bookingDate: new Date().toLocaleString()
             };
 
 
             // Get existing bookings
-            const existingBookings =
-                JSON.parse(
-                    localStorage.getItem("userBookings")
-                ) || [];
+            const existingBookings = JSON.parse(
+                localStorage.getItem("userBookings")
+            ) || [];
 
 
             // Add the new booking
             existingBookings.push(booking);
 
 
-            // Save all bookings
+            // Save bookings
             localStorage.setItem(
                 "userBookings",
                 JSON.stringify(existingBookings)
             );
 
-            
+
             // Success message
 
             alert(
@@ -305,8 +289,7 @@ bookingForm.addEventListener(
 
             // Redirect to home page
 
-            window.location.href =
-                "index.html";
+            window.location.href = "my-bookings.html";
 
         }
 

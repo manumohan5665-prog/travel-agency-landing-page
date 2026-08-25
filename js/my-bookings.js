@@ -1,46 +1,77 @@
+
 // CHECK LOGIN STATUS
 
 const isLoggedIn = localStorage.getItem("isLoggedIn");
-const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
 
+const registeredUser = JSON.parse(
+    localStorage.getItem("registeredUser")
+);
 
-// Redirect if not logged in
+if (isLoggedIn !== "true" || !registeredUser) {
 
-if (
-    isLoggedIn !== "true" ||
-    !registeredUser
-) {
+    alert("Please sign in to view your bookings.");
 
-    alert(
-        "Please sign in to view your bookings."
-    );
-
-    window.location.href =
-        "signin.html";
+    window.location.href = "signin.html";
 
 }
 
+// SELECT BOOKING CONTAINER
+
+const bookingContainer = document.getElementById("bookingContainer");
 
 // GET ALL BOOKINGS
 
-const bookings =
-    JSON.parse(
-        localStorage.getItem(
-            "userBookings"
-        )
-    ) || [];
-
-const bookingContainer =
-    document.getElementById(
-        "bookingContainer"
-    );
+const bookings = JSON.parse(
+    localStorage.getItem("userBookings")
+) || [];
 
 
 // DISPLAY BOOKINGS
 
-if (bookings.length > 0) {
+function displayBookings() {
 
-    bookings.forEach(function (booking) {
+    bookingContainer.innerHTML = "";
+
+
+    // No bookings
+
+    if (bookings.length === 0) {
+
+        bookingContainer.innerHTML = `
+
+            <div class="col-lg-6">
+
+                <div class="no-booking text-center">
+
+                    <i class="bi bi-airplane-engines"></i>
+
+                    <h3>No Bookings Yet</h3>
+
+                    <p>
+                        You haven't booked a trip yet.
+                        Start exploring amazing destinations!
+                    </p>
+
+                    <a href="index.html"
+                       class="btn auth-submit-btn">
+
+                        Explore Trips
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    // Display all bookings
+
+    bookings.forEach(function (booking, index) {
 
         bookingContainer.innerHTML += `
 
@@ -58,11 +89,8 @@ if (bookings.length > 0) {
 
                         </h3>
 
-
                         <span class="booking-status">
-
                             Confirmed
-
                         </span>
 
                     </div>
@@ -159,6 +187,19 @@ if (bookings.length > 0) {
 
                         </div>
 
+                        <div class="text-end mt-3">
+
+                            <button
+                                class="btn cancel-booking-btn"
+                                data-index="${index}">
+
+                                <i class="bi bi-trash"></i>
+                                Cancel Booking
+
+                            </button>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -169,35 +210,64 @@ if (bookings.length > 0) {
 
     });
 
-} else {
-
-    bookingContainer.innerHTML = `
-
-        <div class="col-lg-6">
-
-            <div class="no-booking text-center">
-
-                <i class="bi bi-airplane-engines"></i>
-
-                <h3>No Bookings Yet</h3>
-
-                <p>
-                    You haven't booked a trip yet.
-                    Start exploring amazing destinations!
-                </p>
-
-                <a
-                    href="index.html"
-                    class="btn auth-submit-btn">
-
-                    Explore Trips
-
-                </a>
-
-            </div>
-
-        </div>
-
-    `;
-
 }
+
+// RUN FUNCTION
+
+displayBookings();
+
+
+// CANCEL BOOKING
+
+bookingContainer.addEventListener(
+    "click",
+    function (event) {
+
+        const cancelButton =
+            event.target.closest(
+                ".cancel-booking-btn"
+            );
+
+
+        if (!cancelButton) {
+            return;
+        }
+
+
+        const bookingIndex =
+            Number(
+                cancelButton.dataset.index
+            );
+
+
+        const confirmCancel =
+            confirm(
+                "Are you sure you want to cancel this booking?"
+            );
+
+
+        if (!confirmCancel) {
+            return;
+        }
+
+
+        // Remove selected booking
+        bookings.splice(
+            bookingIndex,
+            1
+        );
+
+
+        // Update localStorage
+        localStorage.setItem(
+            "userBookings",
+            JSON.stringify(bookings)
+        );
+
+
+        // Update UI
+        displayBookings();
+
+    }
+);
+
