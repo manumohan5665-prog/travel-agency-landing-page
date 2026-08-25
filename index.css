@@ -1086,3 +1086,23 @@ body {
     background: #dc3545;
     color: #ffffff;
 }
+
+.booking-id {
+    display: block;
+    margin-top: 0.4rem;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* CANCELLED BOOKING */
+
+.cancelled-status {
+    background: #fdeaea;
+    color: #dc3545;
+}
+
+.cancelled-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    font-weight: 600;
+}

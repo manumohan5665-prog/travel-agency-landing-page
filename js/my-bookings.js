@@ -81,17 +81,34 @@ function displayBookings() {
 
                     <div class="booking-header">
 
-                        <h3>
+                        <div>
 
-                            <i class="bi bi-airplane"></i>
+                            <h3>
 
-                            ${booking.destination}
+                                <i class="bi bi-airplane"></i>
 
-                        </h3>
+                                ${booking.destination}
 
-                        <span class="booking-status">
-                            Confirmed
-                        </span>
+                            </h3>
+
+                            <small class="booking-id">
+
+                                Booking ID: ${booking.bookingId}
+
+                            </small>
+
+                        </div>
+
+
+                            <span
+                                class="booking-status
+                                ${booking.status === "Cancelled"
+                                    ? "cancelled-status"
+                                    : ""}">
+
+                                ${booking.status || "Confirmed"}
+
+                            </span>
 
                     </div>
 
@@ -189,14 +206,35 @@ function displayBookings() {
 
                         <div class="text-end mt-3">
 
-                            <button
-                                class="btn cancel-booking-btn"
-                                data-index="${index}">
+                            ${booking.status !== "Cancelled" ? `
 
-                                <i class="bi bi-trash"></i>
-                                Cancel Booking
+                                <div class="text-end mt-3">
 
-                            </button>
+                                    <button
+                                        class="btn cancel-booking-btn"
+                                        data-index="${index}">
+
+                                        <i class="bi bi-x-circle"></i>
+                                        Cancel Booking
+
+                                    </button>
+
+                                </div>
+
+                            ` : `
+
+                                <div class="text-end mt-3">
+
+                                    <span class="cancelled-message">
+
+                                        <i class="bi bi-x-circle-fill"></i>
+                                        This booking has been cancelled
+
+                                    </span>
+
+                                </div>
+
+                            `}
 
                         </div>
 
@@ -251,21 +289,21 @@ bookingContainer.addEventListener(
         }
 
 
-        // Remove selected booking
-        bookings.splice(
-            bookingIndex,
-            1
-        );
+        // Change booking status instead of deleting
+
+        bookings[bookingIndex].status = "Cancelled";
 
 
         // Update localStorage
+
         localStorage.setItem(
             "userBookings",
             JSON.stringify(bookings)
         );
 
 
-        // Update UI
+        // Refresh the booking list
+
         displayBookings();
 
     }

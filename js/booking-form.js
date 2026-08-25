@@ -253,13 +253,32 @@ bookingForm.addEventListener(
             // Create booking object
 
             const booking = {
-                fullName: registeredUser.fullName,
-                email: registeredUser.email,
-                destination: destination.value,
-                travelers: travelers.value,
-                departureDate: departureDate.value,
-                returnDate: returnDate.value,
-                bookingDate: new Date().toLocaleString()
+                bookingId:
+                    "TRB-" + Date.now(),
+
+                fullName:
+                    registeredUser.fullName,
+
+                email:
+                    registeredUser.email,
+
+                destination:
+                    destination.value,
+
+                travelers:
+                    travelers.value,
+
+                departureDate:
+                    departureDate.value,
+
+                returnDate:
+                    returnDate.value,
+
+                status:
+                    "Confirmed",
+
+                bookingDate:
+                    new Date().toLocaleString()
             };
 
 
